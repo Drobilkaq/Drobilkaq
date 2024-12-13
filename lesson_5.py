@@ -13,7 +13,7 @@ def triangle(x):
     
     ugol = ((b[0] * c[0] + b[1] * c[1])/(line1 * line2))
     
-    print(f'угол относительно оси абцисс {ugol}')
+    print(f'угол по оси абцисс {ugol}')
     return ugol
 
 
@@ -23,7 +23,7 @@ rez = {}
 for i in tochki:
     rez.update({triangle(i): i})
     
-print(f'максимальный угол {max(rez.keys())} у точки с координатами {rez.get(max(rez.keys()))}')
+print(f'макс угол {max(rez.keys())} у точки и их координаты: {rez.get(max(rez.keys()))}')
 
 # 2
 def palindrom(n):
@@ -40,4 +40,4 @@ rez = {}
 for i in range(n + 1):
     if palindrom(i) != '':
         rez.update({i: palindrom(i)})
-print(f'найдено чисел палиндромов {len(rez)}, сами числа {rez}')
+print(f'чисел палиндромов {len(rez)}, сами числа {rez}')
